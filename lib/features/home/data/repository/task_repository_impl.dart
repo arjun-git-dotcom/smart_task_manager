@@ -37,7 +37,7 @@ class TaskRepositoryImpl implements TaskRepository {
       return tasks.map((e) => e.toEntity()).toList();
     } else {
       final cached = await localDataSource.getCachedTasks();
-        print("CACHED TASKS COUNT: ${cached.length}");
+      
       return cached.map((e) => e.toEntity()).toList();
     }
   }

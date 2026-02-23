@@ -29,8 +29,8 @@ class TaskRemoteDataSource {
         '/tasks/',
         queryParameters: {'user_id': userId, 'skip': skip, 'limit': limit},
       );
-      print("RESPONSE: ${response.data}");
-      print("FETCHING TASKS FOR USER: $userId");
+     
+    
       List data;
       if (response.data is List) {
         data = response.data;
@@ -57,10 +57,10 @@ class TaskRemoteDataSource {
         queryParameters: {'user_id': userId},
         data: taskJson,
       );
-      print("CREATE RESPONSE: ${response.data}");
+    
       return TaskModel.fromJson(response.data['data']);
     } on DioException catch (e) {
-      print("DIO ERROR RESPONSE: ${e.response?.data}");
+     
       throw _handleDioError(e);
     } catch (e) {
       throw const ServerException();

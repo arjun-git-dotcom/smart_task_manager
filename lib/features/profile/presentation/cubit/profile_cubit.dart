@@ -25,12 +25,12 @@ class ProfileCubit extends Cubit<ProfileState> {
   if (isClosed) return; 
   emit(state.copyWith(isLoading: true));
   try {
-    print("UPDATING PROFILE: ${updatedProfile.isDarkMode}");
+    
     await userProfileRepository.updateUserProfile(updatedProfile);
     if (isClosed) return; 
     emit(state.copyWith(isLoading: false, profile: updatedProfile));
   } catch (e) {
-    print("UPDATE ERROR: $e");
+ 
     if (isClosed) return; 
     emit(state.copyWith(isLoading: false, errorMessage: 'Failed to update profile: $e'));
   }

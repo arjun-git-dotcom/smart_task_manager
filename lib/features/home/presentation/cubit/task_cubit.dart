@@ -74,7 +74,7 @@ class TaskCubit extends Cubit<TaskState> {
     emit(state.copyWith(tasks: [tempTask, ...state.tasks]));
     try {
       final created = await createTaskUseCase(task: task, userId: userId);
-      print("CREATED TASK TITLE: ${created.title}");
+      
       final updated = state.tasks.map((t) => t.id == tempTask.id ? created : t).toList();
       emit(state.copyWith(tasks: updated));
     } catch (e) {
