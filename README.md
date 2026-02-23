@@ -1,16 +1,33 @@
-# smart_task_manager
+# Smart Task Manager
 
-A new Flutter project.
+A Flutter app built with Clean Architecture and Bloc state management.
 
-## Getting Started
+## Features
+- Firebase Authentication (Login & Registration)
+- Persistent login session
+- Firestore User Profile with Dark Mode toggle
+- Edit profile name
+- REST API Task Management with pagination
+- Infinite scroll & Pull to refresh
+- Search with debounce
+- Filter (All / Completed / Pending)
+- Sort (Due Date / Priority / Created Date)
+- Add / Update / Delete tasks
+- Optimistic UI updates
+- Offline-first with Hive local cache
+- Auto sync when internet restored
+- Offline banner
+- Material 3 UI
 
-This project is a starting point for a Flutter application.
+## Tech Stack
+- Flutter + Bloc
+- Firebase Auth + Firestore
+- Dio + REST API
+- Hive (local cache)
+- Connectivity Plus
 
-A few resources to get you started if this is your first Flutter project:
+## Architecture
+Clean Architecture with feature-based folder structure (auth, home, profile)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## APK
+Release APK is attached in the submission email.
